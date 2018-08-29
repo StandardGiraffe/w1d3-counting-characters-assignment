@@ -4,18 +4,18 @@
 var userArg = process.argv.slice(2).join("").toLowerCase();
 
 var countCharacters = function (string) {
-  var letterCount = {};
+  var letterIndex = {};
 
   for (var i of string) {
-    if (!letterCount[i]) {
-      letterCount[i] = 0;
+    if (!letterIndex[i]) {
+      letterIndex[i] = [];
     }
 
-    letterCount[i] += 1;
+    letterIndex[i].push([i]);
 
   }
 
-  return letterCount;
+  return letterIndex;
 }
 
 console.log(countCharacters(userArg));
