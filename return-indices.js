@@ -5,14 +5,15 @@ var userArg = process.argv.slice(2).join("").toLowerCase();
 
 var countCharacters = function (string) {
   var letterIndex = {};
+  var i = 0;
 
-  for (var i of string) {
-    if (!letterIndex[i]) {
-      letterIndex[i] = [];
+  for (var letter of string) {
+
+    if (!letterIndex[letter]) {
+      letterIndex[letter] = [];
     }
-
-    letterIndex[i].push(string.indexOf(i));
-
+    letterIndex[letter].push(i);
+    i += 1;
   }
 
   return letterIndex;
