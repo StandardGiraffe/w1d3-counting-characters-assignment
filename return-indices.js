@@ -11,7 +11,7 @@ var countCharacters = function (string) {
       letterIndex[i] = [];
     }
 
-    letterIndex[i].push([i]);
+    letterIndex[i].push(string.indexOf(i));
 
   }
 
